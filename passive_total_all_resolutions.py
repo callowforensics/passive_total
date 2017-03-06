@@ -47,7 +47,7 @@ if __name__ == "__main__":
                 dns_query = dns_query.json()
                 completed = True
             else:
-                print("Error in getting data for the domain: {}".format(query))
+                print("Error in getting data for the domain: {}".format(query.replace(".", "(.)")))
                 break
 
             # Only print summary information if the page variable is set to None.
