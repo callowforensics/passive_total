@@ -22,7 +22,6 @@ if __name__ == "__main__":
         os.makedirs(output_dir)
 
     # Get the query_urls
-    queries = []
     with open(query_file, "r") as f:
         queries = [line.strip() for line in f if line != "\n"]
 
