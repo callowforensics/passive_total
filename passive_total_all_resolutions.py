@@ -40,14 +40,14 @@ if __name__ == "__main__":
             # Set the authentication.
             authentication = (user_name, api_key)
             # Make the request.
-            print("Querying resolutions for: {}".format(query.replace(".", "(.)")))
+            print("Querying resolutions for: {}\n".format(query.replace(".", "(.)")))
             dns_query = requests.get(api_url, auth=authentication, params=payload)
             # Check if we have a 200 response.
             if dns_query.status_code == 200:
                 dns_query = dns_query.json()
                 completed = True
             else:
-                print("Error in getting data for the domain: {}".format(query.replace(".", "(.)")))
+                print("Error in getting data for the domain: {}".format(query))
                 break
 
             # Only print summary information if the page variable is set to None.
